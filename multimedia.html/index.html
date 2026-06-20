@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChocoDelight</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #FAF3E0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top Navbar */
+    .navbar-custom {
+      background: #5A2A27;
+    }
+
+    .navbar-brand img {
+      height: 65px;
+      width: 65px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      margin-right: 10px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: gold !important;
+    }
+
+    /* Second Navbar */
+    .menu-nav {
+      background-color: #3A1F1D;
+      padding: 12px;
+    }
+
+    .menu-nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-nav a:hover {
+      color: #E6BE8A;
+    }
+
+    /* Cards */
+    .card1 {
+      margin-bottom: 25px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 8px 20px rgba(92, 51, 23, 0.5);
+    }
+
+    .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      color: #5A2A27;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+    .btn-buy {
+      background-color: #E6BE8A;
+      color: #3A1F1D;
+      border: none;
+      font-weight: bold;
+    }
+
+    .btn-buy:hover {
+      background-color: #D4A373;
+      color: black;
+    }
+
+    /* Modal */
+    .modal-header {
+      background-color: #5A2A27;
+      color: white;
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #6d4c41;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#">
+        <img src="chocolate.jpg" alt="logo">
+      </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+          <a class="nav-link" href="aboutpro.html">All Information</a>
+          </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="contactpro.html">For Support</a>
+          </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="blogpro.html">View More</a>
+          </li>
+          
+        </ul>
+
+        <!-- Search -->
+        <form class="d-flex me-2">
+          <input class="form-control me-2" type="search" placeholder="Search chocolates">
+          <button class="btn btn-warning" type="submit">
+            Search
+          </button>
+        </form>
+
+        <!-- Login Button -->
+        <button class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Login
+        </button>
+
+        <!-- Register Button -->
+        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#registerModal">
+          Register
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Second Navbar -->
+  <nav class="menu-nav text-center">
+    <a href="index.html">Home</a>
+    <a href="productpro.html">Products</a>
+    <a href="aboutpro.html">About</a>
+    <a href="gallerypro.html">Gallery</a>
+    <a href="recipespro.html">Recipes</a>
+    <a href="blogpro.html">Blog</a>
+    <a href="storepro.html">Store</a>
+    <a href="contactpro.html">Contact</a>
+
+    <div class="btn-group">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+        More
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item" href="#">Feedback</a></li>
+        <li><a class="dropdown-item" href="#">Queries</a></li>
+        <li><a class="dropdown-item" href="#">Customer Care</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Product Cards -->
+  <div class="container mt-4">
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c1.jpg" alt="Dark Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Dark Chocolate</h4>
+            <p class="card-text">It Uses Dark Cocoa</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c3.jpg" alt="Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Milk Chocolate</h4>
+            <p class="card-text">Rich,creamy and irresistibly smooth</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c2.jpg" alt="Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Premium Chocolate</h4>
+            <p class="card-text">Luxuriously rich chocolate with an exquisite taste</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate Cards -->
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c4.jpg" alt="Dark Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Truffle</h4>
+            <p class="card-text">Choco truffles with arich,melt-in-your-mouth texture</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c5.jpg" alt="Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Pistachio Bar</h4>
+            <p class="card-text">Crunchy pistachios blended with rich chocolate</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 card1">
+        <div class="card">
+          <img class="card-img-top" src="c7.jpg" alt="Chocolate">
+          <div class="card-body text-center">
+            <h4 class="card-title">Milk Choco Drink</h4>
+            <p class="card-text">Creamy chocolate goodness in every sip</p>
+            <a href="#" class="btn btn-buy">Buy Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Login</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Enter Password">
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              Login
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal fade" id="registerModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Register</h4>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label>Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name">
+            </div>
+
+            <div class="mb-3">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="Enter Email">
+            </div>
+
+            <div class="mb-3">
+              <label>Mobile Number</label>
+              <input type="text" class="form-control" placeholder="Enter Mobile Number">
+            </div>
+
+            <div class="mb-3">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Enter Password">
+            </div>
+
+            <button type="submit" class="btn btn-warning w-100">
+              Register
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<footer style="background-color:#2B1615;" class="text-white pt-5 pb-3 mt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- Brand -->
+      <div class="col-md-4 mb-4">
+        <h3 class="fw-bold text-warning">🍫 ChocoDelight</h3>
+        <p>
+          Experience the sweetness of premium chocolates made with love and rich cocoa flavors.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-warning">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+          <li><a href="productpro.html" class="text-white text-decoration-none">Products</a></li>
+          <li><a href="aboutpro.html" class="text-white text-decoration-none">About</a></li>
+          <li><a href="gallerypro.html" class="text-white text-decoration-none">Gallery</a></li>
+          <li><a href="contactpro.html" class="text-white text-decoration-none">Contact</a></li>
+          <li><a href="blogpro.html" class="text-white text-decoration-none">Blog</a></li>
+          <li><a href="recipespro.html" class="text-white text-decoration-none">Recipes</a></li>
+          <li><a href="storepro.html" class="text-white text-decoration-none">Store</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-warning">Contact Us</h5>
+        <p>📍 Chennai, Tamil Nadu</p>
+        <p>📧 chocodelight@gmail.com</p>
+        <p>📞 +91 98765 43210</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light">
+
+    <div class="text-center">
+      <p class="mb-0">
+        © 2026 ChocoDelight | Made with ❤️ for Chocolate Lovers
+      </p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
